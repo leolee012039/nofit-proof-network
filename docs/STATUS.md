@@ -178,7 +178,7 @@ An independent judge-style review scored the build 31/50 (Technological Implemen
 - **Sellers are paid directly** (ADR-017): Settings → Payouts, `payee` on the order, verification against the payee stored with the order. Verified against the fake PayPal server (payee named, wrong-payee capture refused, no run) and **live on Sandbox 2026-11-06**: a second Sandbox business account as the seller, 12/12 checks including payee, "Paid to Lumen Automation Studio" on the payment card, then run 1 FAILED, run 2 PASSED and the automatic re-assessment (IDs in the git-ignored local notes).
 - Intake questions no longer repeat what the form already asks; duplicate checks are removed.
 
-Validation: typecheck 0 · lint 0 · 115/115 tests · E2E 2/2 with axe.
+Validation: typecheck 0 · lint 0 · 117/117 tests · E2E 2/2 with axe.
 
 ## Known limitations
 

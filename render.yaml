@@ -1,10 +1,11 @@
 # Render Blueprint for the public judge demo (free plan).
 #
-# The embedded database (PGlite) lives on the instance's ephemeral disk and seeds
-# itself with the fictional demo world on start. A redeploy, restart or spin-down
-# (after 15 idle minutes on the free plan) therefore resets the demo, which is the
-# intended behaviour for fictional data. For a persistent, always-on demo, move to a
-# paid instance and set DATABASE_URL (see docs/DEPLOY.md).
+# The free instance has 512 MB of memory. The embedded PGlite database needs about
+# 490 MB on its own (measured in a 512 MB Linux container, see ADR-018), so the hosted
+# demo uses an external Postgres instead: a free Neon project in the same region,
+# reached through DATABASE_URL. Migrate and seed it once from a workstation
+# (`npm run db:migrate && npm run db:seed` with DATABASE_URL set); data then survives
+# restarts and the 15-minute idle spin-down. Judges can reset it from Settings.
 #
 # Secrets (sync: false) are entered in the Render dashboard, never committed.
 services:
@@ -12,6 +13,7 @@ services:
     name: nofit-proof-network
     runtime: node
     plan: free
+    region: oregon
     # NODE_ENV=production makes npm skip devDependencies, which the build needs (Tailwind, TypeScript).
     buildCommand: npm ci --include=dev && npm run build
     startCommand: npm run start
@@ -19,8 +21,15 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+      # Same major version the tests run on; without it Render resolves ">=20.9" on its own.
+      - key: NODE_VERSION
+        value: "24"
       - key: SESSION_SECRET
         generateValue: true
+      # Pooled Neon connection string (sslmode=require). The app refuses to start unless
+      # the connecting user can SET ROLE app_tenant without bypassing row-level security.
+      - key: DATABASE_URL
+        sync: false
       # PayPal: sandbox only. The app refuses any non-sandbox host.
       - key: PAYPAL_ENV
         value: sandbox
@@ -29,6 +38,9 @@ services:
       - key: PAYPAL_CLIENT_SECRET
         sync: false
       - key: PAYPAL_WEBHOOK_ID
+        sync: false
+      # The fictional seller's Sandbox merchant ID, re-applied whenever the demo is reset.
+      - key: DEMO_SELLER_PAYPAL_MERCHANT_ID
         sync: false
       # Labelled "not PayPal" fallback, used only while Sandbox credentials are absent.
       - key: FIXTURE_PAYMENTS

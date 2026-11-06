@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getAppBaseUrl, isLocalDeployment } from "@/lib/config";
+import { getAppBaseUrl, getDemoSellerMerchantId, isLocalDeployment } from "@/lib/config";
 import { AppError } from "@/lib/domain/errors";
 import { booleanField, errorResponse, readJson, stringField } from "@/lib/http";
 
@@ -58,5 +58,12 @@ describe("deployment detection fails closed (ECC review)", () => {
     expect(getAppBaseUrl(env({ APP_BASE_URL: "https://demo.example/", RENDER_EXTERNAL_URL: "https://x.onrender.com" }))).toBe(
       "https://demo.example",
     );
+  });
+
+  it("the hosted demo's seller payout preset accepts only a 13-character merchant ID", () => {
+    expect(getDemoSellerMerchantId(env({}))).toBeUndefined();
+    expect(getDemoSellerMerchantId(env({ DEMO_SELLER_PAYPAL_MERCHANT_ID: " lumenseller01 " }))).toBe("LUMENSELLER01");
+    expect(getDemoSellerMerchantId(env({ DEMO_SELLER_PAYPAL_MERCHANT_ID: "LUMENSELLER0" }))).toBeUndefined();
+    expect(getDemoSellerMerchantId(env({ DEMO_SELLER_PAYPAL_MERCHANT_ID: "LUMEN-SELLER1" }))).toBeUndefined();
   });
 });

@@ -5,7 +5,7 @@
 - URL: `<filled in by the owner after deployment>`. It stays online until the end of the judging period (2026-12-15). The first visit after 15 idle minutes takes about a minute to wake up.
 - Sign in by choosing a fictional persona; there are no passwords.
 - To pay through PayPal Sandbox, log in at checkout with this Sandbox **personal** account, created only for judging. It holds Sandbox test money, never real money: `<email and password filled in by the owner>`.
-- The demo world is shared and resettable: **Settings → Reset + play scripted storyline** restores it.
+- The demo world is shared and resettable: **Settings → Reset to clean start** restores it. (The one-click scripted storyline uses simulated payments, so it runs only in the offline walkthrough below; the hosted demo takes real Sandbox payments.)
 
 The steps below run the same app locally.
 

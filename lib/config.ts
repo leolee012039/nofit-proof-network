@@ -56,6 +56,16 @@ export function getPaymentMode(env: NodeJS.ProcessEnv = process.env): PaymentMod
   };
 }
 
+/**
+ * Hosted demo only: the fictional seller's PayPal Sandbox merchant ID, preset on its organization
+ * whenever the world is seeded or reset (a free instance reseeds on every start). It lives in the
+ * host's settings, never in the repository. Values that are not 13 letters/digits are ignored.
+ */
+export function getDemoSellerMerchantId(env: NodeJS.ProcessEnv = process.env): string | undefined {
+  const id = env.DEMO_SELLER_PAYPAL_MERCHANT_ID?.trim().toUpperCase();
+  return id && /^[A-Z0-9]{13}$/.test(id) ? id : undefined;
+}
+
 export type AiMode = { kind: "anthropic"; apiKey: string; model: string } | { kind: "offline-fixture"; reason: string };
 
 export function getAiMode(env: NodeJS.ProcessEnv = process.env): AiMode {
