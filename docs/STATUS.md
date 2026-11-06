@@ -1,6 +1,6 @@
 # Status — NoFit Proof Network
 
-Last updated: **2026-11-04** (competition readiness: AI intake, hosted-demo blueprint). Submission deadline: 2026-11-12 12:00 PST (2026-11-13 04:00 Taipei).
+Last updated: **2026-11-06** (hosted demo live on Render + Neon; webhooks verified). Submission deadline: 2026-11-12 12:00 PST (2026-11-13 04:00 Taipei).
 
 ## Milestone report
 
@@ -23,12 +23,14 @@ PAYPAL SANDBOX STATE (updated 2026-11-06): order created + capture verified agai
   Sandbox (redirect flow, Sandbox personal buyer): 12/12 server checks, contract PROOF_QUEUED,
   a repeated capture request returned alreadyCaptured. IDs in the git-ignored LOCAL_SANDBOX_NOTES.md.
   JS SDK v6 loads and reports PayPal eligible; its popup flow has not yet been clicked through.
-  Webhook delivery NOT YET VERIFIED (needs the public URL from deployment).
+  Hosted demo (2026-11-06): the same flow on https://nofit-proof-network.onrender.com, paid to the
+  seller, 12/12 checks; CHECKOUT.ORDER.APPROVED and PAYMENT.CAPTURE.COMPLETED webhooks delivered and
+  verified by postback (ALREADY_CAPTURED); run 1 FAILED, run 2 PASSED, live re-assessment CONDITIONAL_FIT.
 AI STATE (updated 2026-11-06): live Claude (claude-opus-5-5) verified: intake draft (8.8 s, every
   field backed by a quote) and assessment explanations, including the automatic re-assessment
   after run 2 passed (CONDITIONAL_FIT).
-KNOWN BLOCKERS: a public HTTPS URL for webhook delivery (Render deployment, owner's account).
-NEXT TASK: deploy (docs/DEPLOY.md), verify webhooks, click through the SDK v6 popup once, record the video.
+KNOWN BLOCKERS: none. Judge-only Sandbox buyer account still to create (owner, PayPal Developer Dashboard).
+NEXT TASK: judge buyer account, click through the SDK v6 popup once, refresh README screenshots, record the video.
 ```
 
 ## Truthful feature status
@@ -150,7 +152,7 @@ Contest requirements were first checked against the PayPal developer blog and co
 - **Ownership:** the submission must be solely owned by the Entrant. A project can win at most one Grand Prize **or** one Honorable Mention, plus one Sponsor Prize (Render's prize covers any submission that uses Render).
 
 - **AI does real work at the start of the flow** (ADR-014). New Assessment has a plain-language box: Claude drafts the intake from the buyer's words and quotes them per field; a deterministic guard drops unquoted claims and never assumes a permission. `lib/ai/intake.ts`, `lib/services/intake.ts`, `POST /api/intake/draft`. The golden-path E2E now starts from the sample request (offline extractor, labelled).
-- **Hosted demo prepared, not deployed** (ADR-015): `render.yaml` (free plan, ephemeral PGlite, secrets entered in Render) and `docs/DEPLOY.md`. A local Render-style run (production build, `PORT`, `RENDER_EXTERNAL_URL`, no `APP_BASE_URL`) served health, sign-in, the scripted storyline and an intake draft.
+- **Hosted demo live** (ADR-015, ADR-018): <https://nofit-proof-network.onrender.com> on Render's free plan with a free Neon Postgres (Oregon). PGlite did not fit the 512 MB instance (out of memory on first deploy); on Postgres the server peaked at 128 MB in a 512 MB container. Secrets live in Render only. See `docs/DEPLOY.md`.
 - **Public-deployment hardening:** the session cookie is `Secure` whenever the public URL is https (it previously looked only at `APP_BASE_URL`); `/api/health` no longer shows the server's database path outside localhost; live model calls are capped per hour and per day (`lib/ai/budget.ts`).
 
 Readiness:
@@ -159,11 +161,11 @@ Readiness:
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | Working prototype     | Done (golden path E2E)                                                                                                               |
 | Meaningful AI         | **Verified live** 2026-11-06 (intake draft + explanations + automatic re-assessment)                                                 |
-| Meaningful PayPal     | **Real Sandbox order + capture verified** 2026-11-06 (redirect flow); webhooks and the SDK v6 popup still to verify after deployment |
-| Public repo + license | MIT ready; repository **not published** (owner approval)                                                                             |
-| Hosted demo           | Blueprint ready; **not deployed** (owner's Render account)                                                                           |
+| Meaningful PayPal     | **Real Sandbox capture verified locally and on the hosted demo**, paid to the seller; webhooks verified; SDK v6 popup still to click |
+| Public repo + license | **Published** 2026-11-06: github.com/leolee012039/nofit-proof-network (MIT detected by GitHub) |
+| Hosted demo           | **Live** 2026-11-06: nofit-proof-network.onrender.com (Render free + Neon free) |
 | Video < 3 min         | Script updated; **not recorded**                                                                                                     |
-| Judge test access     | Guide has a hosted-demo section; **URL and Sandbox buyer login to fill in**                                                          |
+| Judge test access     | URL filled in; **judge-only Sandbox buyer login still to create** |
 | Entrant = owner       | Decided 2026-11-06: enter as the organization TriloAi LLC (matches `LICENSE`), with the owner as Representative                      |
 | Devpost entry         | Draft updated; **not submitted**                                                                                                     |
 
