@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T14:23:09Z",
+  "title": "Design System: NoFit Proof Network",
+  "extensions": {
+    "colorMeta": {
+      "bench-gray": { "role": "neutral", "displayName": "Bench Gray", "canonical": "#eef0ef", "tonalRamp": ["#1f2321", "#353a37", "#4d534f", "#6a706c", "#8b918d", "#b0b5b2", "#d3d7d5", "#eef0ef"] },
+      "form-white": { "role": "neutral", "displayName": "Form White", "canonical": "#ffffff", "tonalRamp": ["#222222", "#3b3b3b", "#585858", "#777777", "#999999", "#bdbdbd", "#e0e0e0", "#ffffff"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#0d1014", "tonalRamp": ["#0d1014", "#272c33", "#383e46", "#5a616b", "#7d848d", "#a3a9b0", "#cbcfd4", "#eef0f2"] },
+      "ink-2": { "role": "neutral", "displayName": "Ink 2", "canonical": "#383e46", "tonalRamp": ["#0d1014", "#272c33", "#383e46", "#5a616b", "#7d848d", "#a3a9b0", "#cbcfd4", "#eef0f2"] },
+      "ink-3": { "role": "neutral", "displayName": "Ink 3", "canonical": "#5a616b", "tonalRamp": ["#0d1014", "#272c33", "#383e46", "#5a616b", "#7d848d", "#a3a9b0", "#cbcfd4", "#eef0f2"] },
+      "steel": { "role": "neutral", "displayName": "Steel", "canonical": "#d6dad8", "tonalRamp": ["#1f2321", "#383d3a", "#555b58", "#767c79", "#999f9c", "#b8bebb", "#d6dad8", "#eef0ef"] },
+      "steel-2": { "role": "neutral", "displayName": "Steel 2", "canonical": "#b8bebb", "tonalRamp": ["#1f2321", "#383d3a", "#555b58", "#767c79", "#999f9c", "#b8bebb", "#d6dad8", "#eef0ef"] },
+      "mist": { "role": "neutral", "displayName": "Mist (void ground)", "canonical": "#e3e6e4", "tonalRamp": ["#1f2321", "#383d3a", "#555b58", "#767c79", "#999f9c", "#b8bebb", "#e3e6e4", "#f4f5f4"] },
+      "marker-yellow": { "role": "primary", "displayName": "Marker Yellow", "canonical": "#ffc40c", "tonalRamp": ["#3d2d00", "#664c00", "#8f6b00", "#c99a00", "#ffc40c", "#ffcf3d", "#ffe28a", "#fff6d6"] },
+      "marker-edge": { "role": "primary", "displayName": "Marker Edge", "canonical": "#c99a00", "tonalRamp": ["#3d2d00", "#664c00", "#8f6b00", "#c99a00", "#ffc40c", "#ffcf3d", "#ffe28a", "#fff6d6"] },
+      "evidence-teal": { "role": "secondary", "displayName": "Evidence Teal", "canonical": "#0b6e50", "tonalRamp": ["#032a1e", "#064533", "#0b6e50", "#2f8d6e", "#5fae92", "#9acfb8", "#c6e5d7", "#e2f1ea"] },
+      "evidence-teal-bg": { "role": "secondary", "displayName": "Evidence Teal Ground", "canonical": "#e2f1ea", "tonalRamp": ["#032a1e", "#064533", "#0b6e50", "#2f8d6e", "#5fae92", "#9acfb8", "#c6e5d7", "#e2f1ea"] },
+      "evidence-teal-line": { "role": "secondary", "displayName": "Evidence Teal Line", "canonical": "#9acfb8", "tonalRamp": ["#032a1e", "#064533", "#0b6e50", "#2f8d6e", "#5fae92", "#9acfb8", "#c6e5d7", "#e2f1ea"] },
+      "caution-amber": { "role": "tertiary", "displayName": "Caution Amber", "canonical": "#855600", "tonalRamp": ["#2e1e00", "#553700", "#855600", "#ad7a12", "#d1a13e", "#ecc96f", "#f7e1a3", "#fff3d1"] },
+      "caution-amber-bg": { "role": "tertiary", "displayName": "Caution Amber Ground", "canonical": "#fff3d1", "tonalRamp": ["#2e1e00", "#553700", "#855600", "#ad7a12", "#d1a13e", "#ecc96f", "#f7e1a3", "#fff3d1"] },
+      "caution-amber-line": { "role": "tertiary", "displayName": "Caution Amber Line", "canonical": "#ecc96f", "tonalRamp": ["#2e1e00", "#553700", "#855600", "#ad7a12", "#d1a13e", "#ecc96f", "#f7e1a3", "#fff3d1"] },
+      "blocker-red": { "role": "tertiary", "displayName": "Blocker Red", "canonical": "#b3261e", "tonalRamp": ["#3d0c09", "#6e1712", "#b3261e", "#cf4c43", "#e57f77", "#f0b2ab", "#f7d3cf", "#fcebe9"] },
+      "blocker-red-bg": { "role": "tertiary", "displayName": "Blocker Red Ground", "canonical": "#fcebe9", "tonalRamp": ["#3d0c09", "#6e1712", "#b3261e", "#cf4c43", "#e57f77", "#f0b2ab", "#f7d3cf", "#fcebe9"] },
+      "blocker-red-line": { "role": "tertiary", "displayName": "Blocker Red Line", "canonical": "#f0b2ab", "tonalRamp": ["#3d0c09", "#6e1712", "#b3261e", "#cf4c43", "#e57f77", "#f0b2ab", "#f7d3cf", "#fcebe9"] }
+    },
+    "typographyMeta": {
+      "hero": { "displayName": "Hero", "purpose": "Landing headline only; 52px on mobile, 76px from sm up." },
+      "display": { "displayName": "Display", "purpose": "The one display element: the verdict or status headline on a record page, or an index page title; 32px on mobile, 40px from sm up." },
+      "title": { "displayName": "Title", "purpose": "Record-page titles (PageHeader size record), section heads, the wordmark." },
+      "body": { "displayName": "Body", "purpose": "Findings, verdict copy, explanations; capped near 68ch." },
+      "body-small": { "displayName": "Body Small", "purpose": "Meta below titles, step labels, table cells, callouts." },
+      "label": { "displayName": "Field Label", "purpose": "Condensed uppercase form-cell labels, table heads, seal labels." },
+      "numeral": { "displayName": "Exhibit Numeral", "purpose": "Tent numerals and custody-step numerals: condensed, extrabold, tabular." },
+      "mono": { "displayName": "Machine Value", "purpose": "Hashes, scopes, policy codes, versions, citation refs only." }
+    },
+    "shadows": [
+      { "name": "contact", "value": "0 1px 2px rgba(13,16,20,0.05)", "purpose": "Every form sheet, verdict sheet and replay comparison; sits on the bench." },
+      { "name": "button-contact", "value": "0 1px 2px rgba(13,16,20,0.2)", "purpose": "The ink primary button." },
+      { "name": "marker-fold", "value": "inset 0 -2px 0 #c99a00", "purpose": "Shaded bottom edge of the yellow marker button; tents use inset 0 -0.18em 0." },
+      { "name": "specimen-lift", "value": "0 2px 4px rgba(13,16,20,0.06), 0 24px 48px -24px rgba(13,16,20,0.28)", "purpose": "Landing evidence-bag specimen only (login persona sheet uses a 0.08 / 0.5 variant)." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The single easing of the authored motion grammar." },
+      { "name": "seal-close", "value": "clip-path inset(0 100% 0 0) to inset(0) 760ms ease-out-expo 200ms", "purpose": "A sealed strip wipes closed across its record, once per page." },
+      { "name": "strike-draw", "value": "scaleX(0) to scaleX(1) from left, 420ms ease-out-expo 250ms", "purpose": "Replay: a 2px ink line strikes the superseded verdict." },
+      { "name": "settle", "value": "translateY(-12px) rotate(-1.5deg) to none, 620ms ease-out-expo 560ms", "purpose": "Replay: the new verdict settles into place." },
+      { "name": "press", "value": "150ms ease-out; active translateY(1px)", "purpose": "Buttons and small colour transitions." },
+      { "name": "reduced-motion", "value": "animation and transition durations 0.01ms, delays 0", "purpose": "prefers-reduced-motion: every animation completes instantly." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "form-cell", "value": "28rem (container query)" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink action for ordinary commits.",
+      "html": "<button class=\"ds-btn-primary\">Open the demo</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--color-ink, #0d1014); color: #fff; font: 600 14px/20px Archivo, system-ui, sans-serif; padding: 10px 16px; border: 0; border-radius: 3px; box-shadow: 0 1px 2px rgba(13,16,20,0.2); cursor: pointer; transition: background-color 150ms ease-out, transform 150ms ease-out; } .ds-btn-primary:hover { background: #272c33; } .ds-btn-primary:active { transform: translateY(1px); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-ink, #0d1014); outline-offset: 2px; }"
+    },
+    {
+      "name": "Marker Button",
+      "kind": "button",
+      "refersTo": "button-marker",
+      "description": "The yellow action: the one step a view exists to move the evidence forward. One per view.",
+      "html": "<button class=\"ds-btn-marker\">Review the proof &rarr;</button>",
+      "css": ".ds-btn-marker { display: inline-flex; align-items: center; gap: 8px; background: var(--color-marker, #ffc40c); color: var(--color-ink, #0d1014); font: 700 14px/20px Archivo, system-ui, sans-serif; padding: 10px 16px; border: 0; border-radius: 3px; box-shadow: inset 0 -2px 0 var(--color-marker-edge, #c99a00); cursor: pointer; transition: background-color 150ms ease-out, transform 150ms ease-out; } .ds-btn-marker:hover { background: #ffcf3d; } .ds-btn-marker:active { transform: translateY(1px); } .ds-btn-marker:focus-visible { outline: 2px solid var(--color-ink, #0d1014); outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "White, steel-bordered alternative action.",
+      "html": "<button class=\"ds-btn-secondary\">Re-run assessment</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--color-ink, #0d1014); font: 600 14px/20px Archivo, system-ui, sans-serif; padding: 10px 16px; border: 1px solid var(--color-steel-2, #b8bebb); border-radius: 3px; cursor: pointer; transition: border-color 150ms ease-out, transform 150ms ease-out; } .ds-btn-secondary:hover { border-color: var(--color-ink, #0d1014); } .ds-btn-secondary:active { transform: translateY(1px); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--color-ink, #0d1014); outline-offset: 2px; }"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Destructive or blocking action; red is reserved for these.",
+      "html": "<button class=\"ds-btn-danger\">Cancel contract</button>",
+      "css": ".ds-btn-danger { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--color-red, #b3261e); font: 600 14px/20px Archivo, system-ui, sans-serif; padding: 10px 16px; border: 1px solid var(--color-red-line, #f0b2ab); border-radius: 3px; cursor: pointer; transition: background-color 150ms ease-out, transform 150ms ease-out; } .ds-btn-danger:hover { background: var(--color-red-bg, #fcebe9); } .ds-btn-danger:active { transform: translateY(1px); } .ds-btn-danger:focus-visible { outline: 2px solid var(--color-ink, #0d1014); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "White field with a yellow focus halo.",
+      "html": "<input class=\"ds-input\" placeholder=\"Budget in USD\" />",
+      "css": ".ds-input { display: block; width: 100%; background: #fff; color: var(--color-ink, #0d1014); font: 400 14px/20px Archivo, system-ui, sans-serif; padding: 8px 12px; border: 1px solid var(--color-steel-2, #b8bebb); border-radius: 3px; caret-color: var(--color-ink, #0d1014); transition: border-color 150ms, box-shadow 150ms; } .ds-input::placeholder { color: var(--color-ink-3, #5a616b); } .ds-input:hover { border-color: var(--color-ink-3, #5a616b); } .ds-input:focus { outline: none; border-color: var(--color-ink, #0d1014); box-shadow: 0 0 0 4px rgba(255,196,12,0.4); }"
+    },
+    {
+      "name": "Case-file Nav",
+      "kind": "nav",
+      "refersTo": "nav-item-active",
+      "description": "Sidebar index; the open drawer is inked with a yellow icon.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-item\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"9\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"5\"/><rect x=\"14\" y=\"12\" width=\"7\" height=\"9\"/><rect x=\"3\" y=\"16\" width=\"7\" height=\"5\"/></svg>Overview</a><a class=\"ds-nav-item\" aria-current=\"page\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><path d=\"M14 2v6h6\"/></svg>Proof Contracts</a><a class=\"ds-nav-item\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 12a9 9 0 1 0 3-6.7L3 8\"/><path d=\"M3 3v5h5\"/><path d=\"M12 7v5l4 2\"/></svg>Outcome Memory</a></nav>",
+      "css": ".ds-nav { display: flex; flex-direction: column; gap: 2px; width: 224px; background: #fff; padding: 8px; } .ds-nav-item { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border-radius: 3px; font: 400 14px/20px Archivo, system-ui, sans-serif; color: var(--color-ink-2, #383e46); text-decoration: none; transition: background-color 150ms, color 150ms; } .ds-nav-item svg { color: var(--color-ink-3, #5a616b); flex-shrink: 0; } .ds-nav-item:hover { background: var(--color-paper, #eef0ef); color: var(--color-ink, #0d1014); } .ds-nav-item[aria-current=page] { background: var(--color-ink, #0d1014); color: #fff; font-weight: 600; } .ds-nav-item[aria-current=page] svg { color: var(--color-marker, #ffc40c); } .ds-nav-item:focus-visible { outline: 2px solid var(--color-ink, #0d1014); outline-offset: 2px; }"
+    },
+    {
+      "name": "Exhibit Tent",
+      "kind": "custom",
+      "refersTo": "exhibit-tent",
+      "description": "Yellow A-frame marker; means an exhibit and nothing else (01 request, 02 verdict, 03 contract, 04 payment, 05+ runs).",
+      "html": "<span class=\"ds-tent ds-tent-sm\">01</span> <span class=\"ds-tent\">03</span> <a class=\"ds-tent ds-tent-lg\" href=\"#\">02</a>",
+      "css": ".ds-tent { display: inline-grid; place-items: center; height: 28px; min-width: 44px; padding: 0 12px; background: var(--color-marker, #ffc40c); color: var(--color-ink, #0d1014); font: 800 16px/1 Archivo, system-ui, sans-serif; font-variation-settings: 'wdth' 70; font-variant-numeric: tabular-nums; text-decoration: none; clip-path: polygon(14% 0, 86% 0, 100% 100%, 0 100%); box-shadow: inset 0 -0.18em 0 var(--color-marker-edge, #c99a00); transition: transform 150ms ease-out; } .ds-tent-sm { height: 20px; min-width: 36px; padding: 0 10px; font-size: 12px; } .ds-tent-lg { height: 40px; min-width: 60px; padding: 0 16px; font-size: 22px; } a.ds-tent:hover { transform: translateY(-2px); } a.ds-tent:focus-visible { outline: 2px solid var(--color-ink, #0d1014); outline-offset: 2px; }"
+    },
+    {
+      "name": "Finding Tag",
+      "kind": "chip",
+      "refersTo": "finding-tag-settled",
+      "description": "State printed on a punched evidence tag; solid = settled, struck on mist = void or superseded.",
+      "html": "<span class=\"ds-finding ds-finding-red\"><svg viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg>Not a fit</span> <span class=\"ds-finding ds-finding-teal\"><svg viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><path d=\"M20 6 9 17l-5-5\"/></svg>Conditional fit</span> <span class=\"ds-finding ds-finding-void\"><svg viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><path d=\"M5 12h14\"/></svg>Cancelled</span>",
+      "css": ".ds-finding { display: inline-flex; align-items: center; gap: 0.35em; height: 32px; padding: 0 0.8em 0 1.3em; font: 800 14px/1 Archivo, system-ui, sans-serif; font-variation-settings: 'wdth' 70; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; color: #fff; clip-path: polygon(0.55em 0, 100% 0, 100% 100%, 0.55em 100%, 0 calc(100% - 0.55em), 0 0.55em); -webkit-mask: radial-gradient(circle 0.2em at 0.68em 50%, transparent 94%, currentColor 100%); mask: radial-gradient(circle 0.2em at 0.68em 50%, transparent 94%, currentColor 100%); } .ds-finding-red { background: var(--color-red, #b3261e); } .ds-finding-teal { background: var(--color-teal, #0b6e50); } .ds-finding-void { background: var(--color-mist, #e3e6e4); color: var(--color-ink-3, #5a616b); text-decoration: line-through; text-decoration-thickness: 2px; }"
+    },
+    {
+      "name": "Seal Strip",
+      "kind": "custom",
+      "refersTo": "seal-strip",
+      "description": "Tamper tape closing a record with its hash; closes once per page.",
+      "html": "<div class=\"ds-seal\"><span class=\"ds-seal-label\">Logged</span><span class=\"ds-seal-body\"><code>sha256 955eb0db…f94b</code><span>policy nofit-policy/2026.10.0</span><span class=\"ds-seal-meta\">Oct 30, 2026 · 14:18 UTC</span></span></div>",
+      "css": ".ds-seal { display: flex; align-items: stretch; min-height: 32px; background: var(--color-ink, #0d1014); color: #fff; font: 400 12px/1.25 Archivo, system-ui, sans-serif; animation: ds-seal-close 760ms cubic-bezier(0.16,1,0.3,1) 200ms both; } .ds-seal-label { display: flex; align-items: center; padding: 0 10px; background: var(--color-marker, #ffc40c); color: var(--color-ink, #0d1014); font-weight: 800; font-variation-settings: 'wdth' 70; letter-spacing: 0.08em; text-transform: uppercase; } .ds-seal-body { display: flex; flex: 1; flex-wrap: wrap; align-items: center; gap: 2px 16px; padding: 6px 12px; } .ds-seal-body code { font-family: 'JetBrains Mono', ui-monospace, monospace; } .ds-seal-meta { margin-left: auto; color: rgba(255,255,255,0.7); } @keyframes ds-seal-close { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } } @media (prefers-reduced-motion: reduce) { .ds-seal { animation: none; } }"
+    },
+    {
+      "name": "Form Sheet",
+      "kind": "card",
+      "refersTo": "form-sheet",
+      "description": "White custody form on the bench with ruled form cells.",
+      "html": "<section class=\"ds-sheet\"><header class=\"ds-sheet-head\"><span class=\"ds-sheet-tent\">01</span><div><h2>The request</h2><p>As the buyer submitted it</p></div></header><dl class=\"ds-cells\"><div><dt>Budget</dt><dd>$3,000.00</dd></div><div><dt>Timeline</dt><dd>21 days</dd></div><div><dt>CRM changes</dt><dd>Fully automatic</dd></div></dl></section>",
+      "css": ".ds-sheet { max-width: 360px; background: #fff; border: 1px solid var(--color-steel, #d6dad8); border-radius: 4px; box-shadow: 0 1px 2px rgba(13,16,20,0.05); font-family: Archivo, system-ui, sans-serif; } .ds-sheet-head { display: flex; gap: 12px; align-items: flex-start; padding: 16px 20px; border-bottom: 1px solid var(--color-steel, #d6dad8); } .ds-sheet-head h2 { margin: 0; font: 600 16px/1.375 Archivo, system-ui, sans-serif; color: var(--color-ink, #0d1014); } .ds-sheet-head p { margin: 2px 0 0; font-size: 14px; color: var(--color-ink-3, #5a616b); } .ds-sheet-tent { display: inline-grid; place-items: center; margin-top: 2px; height: 20px; min-width: 36px; padding: 0 10px; background: var(--color-marker, #ffc40c); color: var(--color-ink, #0d1014); font: 800 12px/1 Archivo, system-ui, sans-serif; font-variation-settings: 'wdth' 70; clip-path: polygon(14% 0, 86% 0, 100% 100%, 0 100%); box-shadow: inset 0 -0.18em 0 var(--color-marker-edge, #c99a00); } .ds-cells { margin: 0 20px 16px; border-top: 1px solid var(--color-steel, #d6dad8); } .ds-cells div { padding: 10px 0; border-bottom: 1px solid var(--color-steel, #d6dad8); } .ds-cells dt { font: 600 12px/1.33 Archivo, system-ui, sans-serif; font-variation-settings: 'wdth' 70; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-ink-3, #5a616b); } .ds-cells dd { margin: 2px 0 0; font-size: 14px; color: var(--color-ink, #0d1014); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Evidence Room",
+    "overview": "Every NoFit record is handled as court evidence. A request, its verdict, the proof contract, the payment and each proof run are numbered exhibits laid on a bench-gray table, written on white custody forms, sealed by their hashes and signed through a chain of custody. The interface is a working evidence room, not a dashboard: dense, ruled, legible at arm's length, with three physical devices doing the identifying work (the yellow exhibit tent, the ink seal strip, the punched finding tag).\n\nDensity is that of a filled-in form: ruled cells with condensed uppercase field labels, plain 16px entries, hairline steel rules between rows. Colour is almost absent; the ground is gray, the sheets white, the type ink. Yellow belongs to exhibits; teal, amber and red belong to evidence states. Archivo carries everything, its width axis doing the hierarchy work: headings run slightly narrow, labels and numerals fully condensed. JetBrains Mono appears only where the value is a machine value.\n\nThis world refuses the card-grid SaaS dashboard (stat tiles, icon-topped cards in rows of three) and the paper-and-stamp editorial look (cream paper, serif display, rubber-stamp rotations, rough edges).",
+    "keyCharacteristics": [
+      "Bench-gray ground, white form sheets with 4px corners, ink type.",
+      "Yellow A-frame tents with condensed black numerals mark exhibits and nothing else.",
+      "Ink seal strips carry the sha256 hash that fixes a record.",
+      "Solid, corner-clipped finding tags with a punched hole print states.",
+      "Every state has a shape as well as a colour.",
+      "One display element per record page; one motion grammar for the whole product."
+    ],
+    "rules": [
+      { "name": "The Exhibit Yellow Rule", "body": "The yellow tent means an exhibit and nothing else. Numbering is fixed: 01 request, 02 verdict, 03 contract, 04 payment, 05 and up proof runs. Steps, counters, nav and badges never wear the tent; the custody strip uses an ink square numeral instead.", "section": "colors" },
+      { "name": "The Three Jobs Rule", "body": "Red is only for blockers and failures, teal only for verified evidence, amber only for warnings and pending work. A colour that does not carry one of those meanings stays ink or gray.", "section": "colors" },
+      { "name": "The Fixed Ramp Rule", "body": "The app uses 12 / 14 / 16 / 22 / 40 (32 on small screens) and nothing between. The landing alone adds a 52 / 76 hero.", "section": "typography" },
+      { "name": "The One Display Rule", "body": "A record page carries one display element. The record is named in a quiet 22px title; the verdict or status headline below it is the only 32/40px type on the page.", "section": "typography" },
+      { "name": "The Honest Mono Rule", "body": "JetBrains Mono only when the string is a machine value someone might copy or compare (hash, scope, code, version). Never for labels, banners or atmosphere.", "section": "typography" },
+      { "name": "The No Eyebrow Rule", "body": "Nothing sits above a heading. Supporting metadata goes below the title, never as a kicker over it.", "section": "typography" },
+      { "name": "The Bench Rule", "body": "Records lie on the bench; they do not hover. No elevation on hover, no floating cards, no glass.", "section": "elevation" },
+      { "name": "The Shape Carries State Rule", "body": "Every state has a shape as well as a colour. A finding tag, seal strip or custody step must stay distinguishable in grayscale.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do mark every record with its exhibit number in a yellow tent: 01 request, 02 verdict, 03 contract, 04 payment, 05+ proof runs.",
+      "Do give every state a shape: solid finding tag for settled, dashed outline for pending, struck through on mist for void, superseded or excluded.",
+      "Do keep one display element per record page: the record title at 22px, the verdict or status headline at 32/40px.",
+      "Do stay on the 12 / 14 / 16 / 22 / 40 ramp in the app; the 52 / 76 hero is for the landing only.",
+      "Do close a sealed record with an ink seal strip carrying its shortened sha256 hash in mono.",
+      "Do print field labels as 12px condensed uppercase ink-3 inside ruled form cells, with metadata below titles.",
+      "Do reserve the marker button for the single action that moves the evidence forward on a view.",
+      "Do honour reduced motion and animate only with transforms and clip-path."
+    ],
+    "donts": [
+      "Don't use the yellow tent for steps, counts, nav, badges or decoration; a custody step is an ink square numeral.",
+      "Don't use red for anything but blockers and failures, teal for anything but verified evidence, or amber for anything but warnings and pending work.",
+      "Don't put an eyebrow or kicker above a heading.",
+      "Don't set labels, banners or atmosphere in mono; JetBrains Mono is for hashes and code identifiers only.",
+      "Don't add a second display-size element to a record page, or invent sizes between ramp steps.",
+      "Don't fade content in, run more than one seal close per page, or lift sheets on hover.",
+      "Don't build card-grid SaaS dashboards (stat-tile rows, icon-topped cards in threes) or the paper-and-stamp editorial look (cream paper, serif display, rotated rubber stamps)."
+    ]
+  }
+}

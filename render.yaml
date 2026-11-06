@@ -1,0 +1,48 @@
+# Render Blueprint for the public judge demo (free plan).
+#
+# The embedded database (PGlite) lives on the instance's ephemeral disk and seeds
+# itself with the fictional demo world on start. A redeploy, restart or spin-down
+# (after 15 idle minutes on the free plan) therefore resets the demo, which is the
+# intended behaviour for fictional data. For a persistent, always-on demo, move to a
+# paid instance and set DATABASE_URL (see docs/DEPLOY.md).
+#
+# Secrets (sync: false) are entered in the Render dashboard, never committed.
+services:
+  - type: web
+    name: nofit-proof-network
+    runtime: node
+    plan: free
+    # NODE_ENV=production makes npm skip devDependencies, which the build needs (Tailwind, TypeScript).
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_SECRET
+        generateValue: true
+      # PayPal: sandbox only. The app refuses any non-sandbox host.
+      - key: PAYPAL_ENV
+        value: sandbox
+      - key: PAYPAL_CLIENT_ID
+        sync: false
+      - key: PAYPAL_CLIENT_SECRET
+        sync: false
+      - key: PAYPAL_WEBHOOK_ID
+        sync: false
+      # Labelled "not PayPal" fallback, used only while Sandbox credentials are absent.
+      - key: FIXTURE_PAYMENTS
+        value: enabled
+      - key: AI_PROVIDER
+        value: anthropic
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_MODEL
+        value: claude-opus-5-5
+      - key: AI_LIVE_CALLS_PER_HOUR
+        value: "60"
+      - key: AI_LIVE_CALLS_PER_DAY
+        value: "400"
+      # Judges can reset the shared fictional world from the app.
+      - key: DEMO_RESET
+        value: enabled

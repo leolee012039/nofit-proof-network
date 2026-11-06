@@ -1,0 +1,2 @@
+DROP INDEX "paypal_orders_one_capture_per_contract_uq";--> statement-breakpoint
+CREATE UNIQUE INDEX "paypal_orders_one_live_order_per_contract_uq" ON "paypal_orders" USING btree ("proof_contract_id") WHERE payment_state in ('CREATED', 'APPROVED', 'CAPTURING', 'CAPTURED', 'CAPTURE_PENDING', 'CAPTURE_UNKNOWN');
