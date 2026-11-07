@@ -167,7 +167,7 @@ Readiness:
 | Meaningful PayPal     | **Real Sandbox capture verified locally and on the hosted demo**, paid to the seller; webhooks verified; SDK v6 popup still to click |
 | Public repo + license | **Published** 2026-11-06: github.com/leolee012039/nofit-proof-network (MIT detected by GitHub) |
 | Hosted demo           | **Live** 2026-11-06: nofit-proof-network.onrender.com (Render free + Neon free) |
-| Video < 3 min         | **Recorded** 2026-11-07 on the hosted demo (2:14, 1080p, captions, no voiceover); owner adds a ~15 s personal clip; **not uploaded** |
+| Video < 3 min         | **Recorded** 2026-11-07 on the hosted demo (2:37, 1080p, captions, English synthetic voice-over reading the captions, no music); owner adds a ~15 s personal clip; **not uploaded** |
 | Judge test access     | URL filled in; judge-only Sandbox buyer account created and verified 2026-11-07 (login goes in the Devpost testing instructions only) |
 | Entrant = owner       | Decided 2026-11-06: enter as the organization TriloAi LLC (matches `LICENSE`), with the owner as Representative                      |
 | Devpost entry         | Draft updated; **not submitted**                                                                                                     |
