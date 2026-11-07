@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { briefFromDraft, offlineProofDraft, type ProofBriefDraft } from "@/lib/ai/proof-brief";
+import { briefFromDraft, offlineProofDraft, overclaims, type ProofBriefDraft } from "@/lib/ai/proof-brief";
 import { demoRequirement } from "@/lib/domain/requirements";
 import type { PolicyResult } from "@/lib/policy/types";
 import { runProof } from "@/lib/proofs/runner";
@@ -60,6 +60,28 @@ describe("proof brief", () => {
         LIVE,
       ),
     ).toBeNull();
+  });
+
+  it("keeps honest negations: saying the test is not the buyer's real account is not an over-claim", () => {
+    for (const summary of [
+      "Checks the update flow against a simulated HubSpot, not your real account, with an approval step in place.",
+      "The test never touches your real HubSpot account; it runs on synthetic contacts only.",
+      "There is no guarantee for other HubSpot versions, but the tested flow is checked end to end.",
+      "It runs without your production CRM, on a simulated copy with the same permissions.",
+    ]) {
+      expect(briefFromDraft(draft({ summary }), LIVE), summary).not.toBeNull();
+    }
+  });
+
+  it("still refuses over-claims that only look negated", () => {
+    for (const summary of [
+      "This test not only checks the permission but guarantees the sync will work in production.",
+      "No setup is needed: the test runs on your real HubSpot account and updates it directly.",
+      "The update is held for approval. It is certified to work with your live CRM.",
+    ]) {
+      expect(briefFromDraft(draft({ summary }), LIVE), summary).toBeNull();
+    }
+    expect(overclaims("It does not run on fixtures. It guarantees results.")).toBe(true);
   });
 
   it("the offline template only uses real checks", () => {

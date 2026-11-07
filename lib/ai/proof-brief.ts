@@ -119,7 +119,17 @@ export function offlineProofDraft(input: BriefInput): ProofBriefDraft {
 }
 
 const OVERCLAIM =
-  /\b(guarantee[ds]?|certif(?:y|ied|ication)|warrant(?:y|ies)|your (?:real|live|production) (?:hubspot|account|crm|system)s?)\b/i;
+  /\b(guarantee[ds]?|certif(?:y|ied|ication)|warrant(?:y|ies)|your (?:real|live|production) (?:hubspot|account|crm|system)s?)\b/gi;
+/** A negation shortly before the phrase, in the same clause ("not your real account", "no guarantee"). "not only" does not count. */
+const NEGATED = /\b(?:not(?!\s+(?:only|just)\b)|never|no|nor|without|(?:is|does|do|wo|ca)n['’]t|cannot)\b[^.;:!?]{0,40}$/i;
+
+/** True if the text claims a guarantee or a test of the buyer's real systems; honest negations of those are allowed. */
+export function overclaims(text: string): boolean {
+  for (const m of text.matchAll(OVERCLAIM)) {
+    if (!NEGATED.test(text.slice(Math.max(0, m.index - 60), m.index))) return true;
+  }
+  return false;
+}
 
 /** Keeps a draft only if it is well-formed and claims nothing the simulator cannot back; null otherwise. */
 export function briefFromDraft(d: ProofBriefDraft, draftedBy: ProofBrief["draftedBy"]): ProofBrief | null {
@@ -135,7 +145,7 @@ export function briefFromDraft(d: ProofBriefDraft, draftedBy: ProofBrief["drafte
     .filter((s) => s.length > 0 && s.length <= 220)
     .slice(0, 3);
   const text = [summary, ...answers.map((a) => a.question)].join(" ");
-  if (summary.length < 20 || summary.length > 600 || answers.length < 2 || OVERCLAIM.test(text)) return null;
+  if (summary.length < 20 || summary.length > 600 || answers.length < 2 || overclaims(text)) return null;
   return { summary, answers: answers.slice(0, 4), notCovered, draftedBy };
 }
 
