@@ -14,7 +14,7 @@
 
 **Built with:** PayPal Orders v2 (Sandbox), PayPal JavaScript SDK v6, PayPal webhooks, Claude API (`claude-opus-5-5`), Next.js, TypeScript, PostgreSQL / PGlite, Drizzle ORM, Tailwind CSS, Playwright, Vitest, Render (hosting).
 
-**Testing instructions:** see `docs/JUDGE_TESTING.md` in the repository (hosted demo, PayPal Sandbox buyer login for judges, and a no-credentials local walkthrough).
+**Testing instructions:** hosted demo at <https://nofit-proof-network.onrender.com> (choose a fictional persona, no password). To pay at checkout, log in to PayPal Sandbox with this judge-only **personal** account (Sandbox test money only): `<owner pastes the Sandbox email and password here, in Devpost only>`. Full guide, including a no-credentials local walkthrough: `docs/JUDGE_TESTING.md` in the repository.
 
 ## Inspiration
 

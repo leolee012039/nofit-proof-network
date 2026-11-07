@@ -5,7 +5,7 @@
 - URL: **<https://nofit-proof-network.onrender.com>**. It stays online until the end of the judging period (2026-12-15). The first visit after 15 idle minutes takes about a minute to wake up.
 - It runs with live PayPal Sandbox payments (paid directly to the fictional seller), live Claude calls (capped per hour and per day, with a labelled offline fallback) and Postgres row-level security. `/api/health` shows which modes are active.
 - Sign in by choosing a fictional persona; there are no passwords.
-- To pay through PayPal Sandbox, log in at checkout with this Sandbox **personal** account, created only for judging. It holds Sandbox test money, never real money: `<email and password filled in by the owner>`.
+- To pay through PayPal Sandbox, log in at checkout with this Sandbox **personal** account, created only for judging. It holds Sandbox test money, never real money. Its email and password are in the **testing instructions of the Devpost submission** (kept out of this public repository).
 - The demo world is shared and resettable: **Settings → Reset to clean start** restores it. (The one-click scripted storyline uses simulated payments, so it runs only in the offline walkthrough below; the hosted demo takes real Sandbox payments.)
 
 The steps below run the same app locally.

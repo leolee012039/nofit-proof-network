@@ -1,6 +1,6 @@
 # Status — NoFit Proof Network
 
-Last updated: **2026-11-06** (hosted demo live on Render + Neon; webhooks verified). Submission deadline: 2026-11-12 12:00 PST (2026-11-13 04:00 Taipei).
+Last updated: **2026-11-07** (demo video recorded on the hosted demo; judge Sandbox buyer account verified). Submission deadline: 2026-11-12 12:00 PST (2026-11-13 04:00 Taipei).
 
 ## Milestone report
 
@@ -29,8 +29,10 @@ PAYPAL SANDBOX STATE (updated 2026-11-06): order created + capture verified agai
 AI STATE (updated 2026-11-06): live Claude (claude-opus-5-5) verified: intake draft (8.8 s, every
   field backed by a quote) and assessment explanations, including the automatic re-assessment
   after run 2 passed (CONDITIONAL_FIT).
-KNOWN BLOCKERS: none. Judge-only Sandbox buyer account still to create (owner, PayPal Developer Dashboard).
-NEXT TASK: judge buyer account, click through the SDK v6 popup once, refresh README screenshots, record the video.
+KNOWN BLOCKERS: none. Judge-only Sandbox personal buyer account created by the owner (2026-11-07); its
+  login and a $49.00 Sandbox payment were verified on the hosted demo while recording the video.
+NEXT TASK: owner adds a personal clip and uploads the video; owner submits Devpost. Optional: click
+  through the SDK v6 popup once, refresh README screenshots.
 ```
 
 ## Truthful feature status
@@ -45,7 +47,7 @@ NEXT TASK: judge buyer account, click through the SDK v6 popup once, refresh REA
 | Proof contract, seller approval, buyer acceptance, immutability          | Done                                                                                              | tenancy/transition tests + DB trigger                                            |
 | PayPal Orders v2 server integration                                      | **Verified against Sandbox** 2026-11-06 (order, capture, 12/12 checks, repeat capture is a no-op) | fake PayPal HTTP server tests + live run (IDs in the git-ignored local notes)    |
 | PayPal JS SDK v6 button                                                  | Loads in the browser and reports PayPal eligible; **popup flow not yet clicked through**          | redirect flow verified live                                                      |
-| Webhook signature verification + dedupe + retry-safety                   | Implemented, **not verified with real PayPal deliveries** (needs the deployed URL)                | fake postback tests                                                              |
+| Webhook signature verification + dedupe + retry-safety                   | **Verified** 2026-11-06 with real Sandbox deliveries to the hosted demo                           | fake postback tests + live deliveries (CHECKOUT.ORDER.APPROVED, PAYMENT.CAPTURE.COMPLETED) |
 | FIXTURE provider (no credentials)                                        | Done, labelled everywhere                                                                         | E2E golden path                                                                  |
 | Proof runner + evidence digest + replay CLI                              | Done                                                                                              | unit tests, CLI digest = UI digest                                               |
 | Outcome memory + stale/tamper exclusion                                  | Done                                                                                              | eval + integration tests                                                         |
@@ -54,9 +56,10 @@ NEXT TASK: judge buyer account, click through the SDK v6 popup once, refresh REA
 | Database state guards (contracts, runs, outcomes, requests, assessments) | Done                                                                                              | `tests/integration/ecc-review.test.ts`                                           |
 | Demo reset / scripted storyline                                          | Done (localhost default only)                                                                     | fresh-clone check                                                                |
 | Accessibility smoke                                                      | Done for 5 pages                                                                                  | axe in E2E (2 real issues found and fixed)                                       |
-| Deployment                                                               | **Not done** (needs owner approval)                                                               | —                                                                                |
+| Deployment                                                               | **Live** 2026-11-06 (Render free + Neon free, owner-approved)                                     | `docs/DEPLOY.md`                                                                 |
 | LICENSE                                                                  | Done (MIT, owner-approved)                                                                        | `LICENSE`                                                                        |
-| Public repo, video, Devpost                                              | **Not done** (needs owner approval)                                                               | drafts in `docs/`                                                                |
+| Public repo                                                              | **Published** 2026-11-06 (owner-approved)                                                         | github.com/leolee012039/nofit-proof-network                                      |
+| Video, Devpost                                                           | **Not done** (Devpost is submitted by the owner)                                                  | drafts in `docs/`                                                                |
 
 ## Test evidence (2026-10-27, Windows 11, Node 24.14.1)
 
@@ -164,12 +167,12 @@ Readiness:
 | Meaningful PayPal     | **Real Sandbox capture verified locally and on the hosted demo**, paid to the seller; webhooks verified; SDK v6 popup still to click |
 | Public repo + license | **Published** 2026-11-06: github.com/leolee012039/nofit-proof-network (MIT detected by GitHub) |
 | Hosted demo           | **Live** 2026-11-06: nofit-proof-network.onrender.com (Render free + Neon free) |
-| Video < 3 min         | Script updated; **not recorded**                                                                                                     |
-| Judge test access     | URL filled in; **judge-only Sandbox buyer login still to create** |
+| Video < 3 min         | **Recorded** 2026-11-07 on the hosted demo (2:14, 1080p, captions, no voiceover); owner adds a ~15 s personal clip; **not uploaded** |
+| Judge test access     | URL filled in; judge-only Sandbox buyer account created and verified 2026-11-07 (login goes in the Devpost testing instructions only) |
 | Entrant = owner       | Decided 2026-11-06: enter as the organization TriloAi LLC (matches `LICENSE`), with the owner as Representative                      |
 | Devpost entry         | Draft updated; **not submitted**                                                                                                     |
 
-Validation: typecheck 0 · lint 0 · 104/104 tests · E2E 2/2 with axe.
+Validation: typecheck 0 · lint 0 · 119/119 tests (2026-11-07, after the proof-brief guard fix) · E2E 2/2 with axe.
 
 ## Judge-review fixes (2026-11-06)
 
