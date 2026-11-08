@@ -1,6 +1,6 @@
 # Status — NoFit Proof Network
 
-Last updated: **2026-11-07** (demo video recorded on the hosted demo; judge Sandbox buyer account verified). Submission deadline: 2026-11-12 12:00 PST (2026-11-13 04:00 Taipei).
+Last updated: **2026-11-08** (GitHub Actions CI added and green; demo video recorded on the hosted demo; judge Sandbox buyer account verified). Submission deadline: 2026-11-12 12:00 PST (2026-11-13 04:00 Taipei).
 
 ## Milestone report
 
@@ -16,9 +16,12 @@ IMPLEMENTED: Next.js 16 app (app/, components/, lib/); Postgres schema + RLS + i
   runner with reproducible SHA-256 evidence (lib/proofs, npm run proof:replay); outcome memory;
   decision replay; knowledge base with versioned price presets; demo personas; demo reset;
   docs (README, ARCHITECTURE, DECISIONS, THREAT_MODEL, DEMO_SCRIPT, DEVPOST_SUBMISSION, JUDGE_TESTING).
-TESTS EXECUTED: npm run lint (0 problems) · npm run typecheck (0 errors) · npm test (86/86 passed)
+TESTS EXECUTED: npm run lint (0 problems) · npm run typecheck (0 errors) · npm test (119/119 passed)
   · npm run build (success) · npm run test:e2e (2/2 passed incl. axe WCAG A/AA smoke on 5 pages)
   · fresh-clone install/build/start (pass) · npm run proof:replay digests match the UI.
+  · GitHub Actions CI (.github/workflows/ci.yml, 2026-11-08): typecheck, lint, unit tests, build and
+  E2E on every push, no secrets needed; green. Its first run found that `npm run typecheck` failed on a
+  fresh clone (Next's generated PageProps type was missing), fixed by running `next typegen` first.
 PAYPAL SANDBOX STATE (updated 2026-11-06): order created + capture verified against real PayPal
   Sandbox (redirect flow, Sandbox personal buyer): 12/12 server checks, contract PROOF_QUEUED,
   a repeated capture request returned alreadyCaptured. IDs in the git-ignored LOCAL_SANDBOX_NOTES.md.

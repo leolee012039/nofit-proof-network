@@ -1,5 +1,7 @@
 # NoFit Proof Network
 
+[![CI](https://github.com/leolee012039/nofit-proof-network/actions/workflows/ci.yml/badge.svg)](https://github.com/leolee012039/nofit-proof-network/actions/workflows/ci.yml)
+
 **Don't buy promises. Buy proof.**
 
 NoFit turns a risky automation purchase into a small, paid, bounded technical proof. A buyer describes an integration; a deterministic policy engine checks it against the seller's versioned knowledge and an AI explains the result with citations. When the full scope is blocked by a fixable constraint, the seller offers a fixed-price proof contract. The buyer pays through **PayPal Sandbox Checkout**, a simulated test runs only after a server-verified capture, and the hashed evidence — failures included — changes the next decision.
