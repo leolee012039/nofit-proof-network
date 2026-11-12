@@ -34,7 +34,9 @@ AI STATE (updated 2026-11-06): live Claude (claude-opus-5-5) verified: intake dr
   after run 2 passed (CONDITIONAL_FIT).
 KNOWN BLOCKERS: none. Judge-only Sandbox personal buyer account created by the owner (2026-11-07); its
   login and a $49.00 Sandbox payment were verified on the hosted demo while recording the video.
-NEXT TASK: submit Devpost (video public on YouTube since 2026-11-12: https://youtu.be/GHMcQD0211Q). Optional: click
+NEXT TASK: none required. Devpost entry SUBMITTED 2026-11-12 (https://devpost.com/software/nofit-proof-network);
+  video public on YouTube (https://youtu.be/GHMcQD0211Q). Owner adds the judge Sandbox login to the Devpost
+  testing instructions (Devpost only) before the deadline. Optional: click
   through the SDK v6 popup once, refresh README screenshots.
 ```
 
