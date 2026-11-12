@@ -6,7 +6,7 @@
 
 **One-sentence pitch:** Before a business commits $3,000 to an automation project, NoFit lets it pay $49 through PayPal for a bounded test of the one thing that could break it, and remembers the result for the next buyer.
 
-**Links:** Demo URL: `<pending deployment approval>` · Repository: `<pending public repo approval>` · Video: `<pending YouTube upload>`
+**Links:** Demo URL: <https://nofit-proof-network.onrender.com> · Repository: <https://github.com/leolee012039/nofit-proof-network> · Video: `<pending YouTube upload>`
 
 **Entrant:** TriloAi LLC (organization), entered by its Representative. The code is TriloAi LLC's own work and is released under the MIT license.
 
@@ -14,7 +14,7 @@
 
 **Built with:** PayPal Orders v2 (Sandbox), PayPal JavaScript SDK v6, PayPal webhooks, Claude API (`claude-opus-5-5`), Next.js, TypeScript, PostgreSQL / PGlite, Drizzle ORM, Tailwind CSS, Playwright, Vitest, Render (hosting).
 
-**Testing instructions:** hosted demo at <https://nofit-proof-network.onrender.com> (choose a fictional persona, no password). To pay at checkout, log in to PayPal Sandbox with this judge-only **personal** account (Sandbox test money only): `<owner pastes the Sandbox email and password here, in Devpost only>`. Full guide, including a no-credentials local walkthrough: `docs/JUDGE_TESTING.md` in the repository.
+**Testing instructions:** hosted demo at <https://nofit-proof-network.onrender.com> (choose a fictional persona, no password). The first visit after 15 idle minutes takes about a minute to wake up, and submitting an assessment takes up to a minute while a live model writes the explanation. To pay at checkout, log in to PayPal Sandbox with this judge-only **personal** account (Sandbox test money only): `<owner pastes the Sandbox email and password here, in Devpost only>`. Full guide, including a no-credentials local walkthrough: `docs/JUDGE_TESTING.md` in the repository.
 
 ## Inspiration
 
