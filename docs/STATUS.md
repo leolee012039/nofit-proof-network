@@ -34,7 +34,7 @@ AI STATE (updated 2026-11-06): live Claude (claude-opus-5-5) verified: intake dr
   after run 2 passed (CONDITIONAL_FIT).
 KNOWN BLOCKERS: none. Judge-only Sandbox personal buyer account created by the owner (2026-11-07); its
   login and a $49.00 Sandbox payment were verified on the hosted demo while recording the video.
-NEXT TASK: owner uploads the final video (2:37) to YouTube as public; owner submits Devpost. Optional: click
+NEXT TASK: submit Devpost (video public on YouTube since 2026-11-12: https://youtu.be/GHMcQD0211Q). Optional: click
   through the SDK v6 popup once, refresh README screenshots.
 ```
 
@@ -170,7 +170,7 @@ Readiness:
 | Meaningful PayPal     | **Real Sandbox capture verified locally and on the hosted demo**, paid to the seller; webhooks verified; SDK v6 popup still to click |
 | Public repo + license | **Published** 2026-11-06: github.com/leolee012039/nofit-proof-network (MIT detected by GitHub) |
 | Hosted demo           | **Live** 2026-11-06: nofit-proof-network.onrender.com (Render free + Neon free) |
-| Video < 3 min         | **Final cut** 2026-11-11: 2:37, 1080p. The demo recorded 2026-11-07 on the hosted demo (captions, English synthetic voice-over reading the captions, no music). An AI-edited founder intro was tried and dropped; **not uploaded** |
+| Video < 3 min         | **Final cut** 2026-11-11: 2:37, 1080p. The demo recorded 2026-11-07 on the hosted demo (captions, English synthetic voice-over reading the captions, no music). An AI-edited founder intro was tried and dropped. **Public on YouTube** 2026-11-12: <https://youtu.be/GHMcQD0211Q> (2:37, checked public and playable) |
 | Judge test access     | URL filled in; judge-only Sandbox buyer account created and verified 2026-11-07 (login goes in the Devpost testing instructions only) |
 | Entrant = owner       | Decided 2026-11-06: enter as the organization TriloAi LLC (matches `LICENSE`), with the owner as Representative                      |
 | Devpost entry         | Draft updated; **not submitted**                                                                                                     |

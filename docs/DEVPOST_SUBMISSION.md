@@ -6,7 +6,7 @@
 
 **One-sentence pitch:** Before a business commits $3,000 to an automation project, NoFit lets it pay $49 through PayPal for a bounded test of the one thing that could break it, and remembers the result for the next buyer.
 
-**Links:** Demo URL: <https://nofit-proof-network.onrender.com> · Repository: <https://github.com/leolee012039/nofit-proof-network> · Video: `<pending YouTube upload>`
+**Links:** Demo URL: <https://nofit-proof-network.onrender.com> · Repository: <https://github.com/leolee012039/nofit-proof-network> · Video: <https://youtu.be/GHMcQD0211Q>
 
 **Entrant:** TriloAi LLC (organization), entered by its Representative. The code is TriloAi LLC's own work and is released under the MIT license.
 
